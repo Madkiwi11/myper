@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+
+.hob-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .hob-title {
+    text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-family: 'Space Mono', monospace;
+  background: linear-gradient(90deg, #f29bfd, #bf9fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
+  /* الصور */
+  .hob-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* صورة 1 ثابتة - now set to appear as a whole */
+  .hob-images .img-1 {
+    width: 80%;
+    max-height: 85%;
+    object-fit: contain; /* Changed from cover to contain to show the whole image */
+    position: absolute;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  
+  /* صورة 2 تتحرك من اليسار */
+  .hob-images.animate .img-2 {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 2;
+    transform: translateX(0);
+    animation: slideInFromLeft 4s forwards;
+    bottom: 250px;
+  }
+  
+  /* صورة 3 تتحرك من الأعلى */
+  .hob-images.animate .img-3 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 3;
+    transform: translateY(0);
+    animation: slideInFromTop 2s forwards 0s;
+    top: 10px;
+    right: 100px;
+  }
+  
+  /* تكبير الصور عند الوقوف عليها */
+  .hob-images img:hover {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+  
+  /* Animation from Left */
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100vw);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Animation from Top */
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-100vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Enhanced Responsive styles */
+  @media (max-width: 1400px) {
+    .hob-title {
+      font-size: 2.2rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 75%;
+      max-height: 80%;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 280px;
+      height: 280px;
+      bottom: 260px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 190px;
+      height: 190px;
+      right: 90px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .hob-title {
+      font-size: 2rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 70%;
+      max-height: 75%;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 220px;
+      height: 220px;
+      bottom: 200px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 160px;
+      height: 160px;
+      top: 15px;
+      right: 80px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .hob-title {
+      font-size: 1.8rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 65%;
+      max-height: 70%;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 180px;
+      height: 180px;
+      bottom: 180px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 140px;
+      height: 140px;
+      top: 20px;
+      right: 60px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hob-container {
+      height: 180vh; /* Reduced container height for better fit on smaller screens */
+    }
+    
+    .hob-title {
+      font-size: 1.6rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 60%;
+      max-height: 65%;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 150px;
+      height: 150px;
+      bottom: 150px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 120px;
+      height: 120px;
+      top: 25px;
+      right: 50px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hob-container {
+      height: 160vh;
+    }
+    
+    .hob-title {
+      font-size: 1.4rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 55%;
+      max-height: 60%;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 120px;
+      height: 120px;
+      bottom: 120px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 100px;
+      height: 100px;
+      top: 20px;
+      right: 40px;
+    }
+  }
+  
+
+  @media (max-width: 430px) {
+    .hob-container {
+      height: 70vh;
+    }
+    
+    .hob-title {
+        margin-top: 30px;
+      font-size: 2rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 90%;
+      max-height: 100%;
+      top: 40px;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 100px;
+      height: 100px;
+      bottom: 240px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 80px;
+      height: 80px;
+      top: 1px;
+      right: 30px;
+    }
+  } 
+
+
+
+
+  @media (max-width: 414px) {
+    .hob-container {
+      height: 70vh;
+   
+    }
+    
+    .hob-title {
+        margin-top: 30px;
+      font-size: 2rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 90%;
+      max-height: 100%;
+      top: 40px;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 100px;
+      height: 100px;
+      bottom: 220px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 80px;
+      height: 80px;
+      top: 1px;
+      right: 30px;
+    }
+  }
+
+  @media (max-width: 412px) {
+    .hob-container {
+      height: 150vh;
+     margin-bottom: -750px;
+    }
+    
+    .hob-title {
+        margin-top: 30px;
+      font-size: 2rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 90%;
+      max-height: 100%;
+      top: 40px;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 100px;
+      height: 100px;
+      bottom: 970px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 80px;
+      height: 80px;
+      top: 1px;
+      right: 30px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .hob-container {
+      height: 60vh;
+     margin-bottom: 100px;
+    }
+    
+    .hob-title {
+        margin-top: 30px;
+      font-size: 2rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 90%;
+      max-height: 100%;
+      top: 40px;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 100px;
+      height: 100px;
+      bottom: 120px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 80px;
+      height: 80px;
+      top: 1px;
+      right: 30px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .hob-container {
+      height: 70vh;
+     margin-bottom: 100px;
+    }
+    
+    .hob-title {
+        margin-top: 30px;
+      font-size: 2rem;
+    }
+    
+    .hob-images .img-1 {
+      width: 90%;
+      max-height: 80%;
+      top: 40px;
+    }
+    
+    .hob-images.animate .img-2 {
+      width: 100px;
+      height: 100px;
+      bottom: 140px;
+    }
+    
+    .hob-images.animate .img-3 {
+      width: 80px;
+      height: 80px;
+      top: 1px;
+      right: 30px;
+    }
+  }

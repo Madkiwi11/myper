@@ -1,0 +1,125 @@
+.ach-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: -100px;
+  gap: 20px;
+  flex-direction: row-reverse;
+}
+
+.ach-image-container {
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ach-image {
+  margin-left: 30px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 360px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.ach-image-container:hover .ach-image {
+  transform: scale(1.1) rotate(5deg);
+  filter: brightness(1.2);
+}
+
+.ach-text-container {
+  flex: 2;
+  text-align: left;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin-top: 200px;
+}
+
+.ach-text-container h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #82B4FF, #BFF0FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.ach-text-container p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .ach-container {
+    flex-direction: row-reverse;
+    text-align: left;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .ach-text-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0px;
+    margin-top: -100px;
+    padding-top: 90px;
+  }
+
+  .ach-image {
+    max-width: 290px;
+    width: 210px;
+    height: auto;
+    margin-top: 150px;
+  }
+
+  .ach-text-container h1 {
+    font-size: 1.8rem;
+    margin-top: 70px;
+    text-align: center;
+  }
+
+  .ach-text-container p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ach-container {
+      flex-direction: row-reverse;
+      align-items: center;
+      text-align: left;
+      gap: 0px;
+  }
+
+  .ach-text-container {
+      max-width: 100%;
+      margin: 0;
+      padding: 0px;
+      margin-top: -50px;
+      padding-top: 50px;
+  }
+
+  .ach-image {
+      max-width: 200px;
+      width: 150px;
+      height: auto;
+      margin-top: 100px;
+  }
+
+  .ach-text-container h1 {
+      font-size: 1.5rem;
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .ach-text-container p {
+      font-size: 0.7rem;
+  }
+}

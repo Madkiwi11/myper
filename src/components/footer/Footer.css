@@ -1,0 +1,301 @@
+/* استيراد الخط Inter من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Style for the main content wrapper */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+}
+
+/* This will push the footer to the bottom */
+main, .content {
+  flex: 1 0 auto; /* This makes the content area expand to push footer down */
+}
+
+.footer-container {
+  background-color: #101216;  /* خلفية داكنة */
+  color: #fff;  /* نص أبيض */
+  padding: 30px 10%;  /* حشوة على الأطراف */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+  flex-shrink: 0; /* Prevent footer from shrinking */
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto; /* This pushes the footer to the bottom */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-about, .footer-socials, .footer-contact {
+  max-width: 300px;
+  text-align: left;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-about p {
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-socials h3, .footer-contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.social-links li {
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.social-links a {
+  color: #D19EF6;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.social-links a:hover {
+  color: #af00bc; /* تغيير اللون عند التمرير */
+}
+
+.social-icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover .social-icon {
+  transform: scale(1.1);  /* تكبير الأيقونة عند التمرير */
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 1rem;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  width: 100%;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* إضافة خط Inter */
+}
+
+/* Enhanced responsive styles */
+@media (max-width: 1200px) {
+  .footer-container {
+    padding: 25px 8%;
+  }
+  
+  .footer-about h2 {
+    font-size: 1.6rem;
+  }
+  
+  .footer-socials h3, .footer-contact h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    padding: 20px 6%;
+  }
+  
+  .footer-content {
+    gap: 20px;
+  }
+  
+  .footer-about, .footer-socials, .footer-contact {
+    max-width: 280px;
+  }
+  
+  .footer-about h2 {
+    font-size: 1.5rem;
+  }
+  
+  .social-links a {
+    font-size: 1.1rem;
+  }
+  
+  .social-icon {
+    font-size: 1.4rem;
+  }
+}
+
+/* التأكد من التوافق مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px 5%;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-about, .footer-socials, .footer-contact {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  .footer-about h2 {
+    font-size: 1.4rem;
+  }
+  
+  .footer-about p {
+    font-size: 0.95rem;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-links li {
+    margin-bottom: 0;
+  }
+  
+  .social-links a {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    padding: 15px 4%;
+  }
+  
+  .footer-content {
+    gap: 20px;
+  }
+  
+  .footer-about h2 {
+    font-size: 1.3rem;
+  }
+  
+  .footer-socials h3, .footer-contact h3 {
+    font-size: 1rem;
+  }
+  
+  .footer-about p {
+    font-size: 0.9rem;
+  }
+  
+  .social-links a {
+    font-size: 1rem;
+  }
+  
+  .social-icon {
+    font-size: 1.3rem;
+    margin-right: 8px;
+  }
+  
+  .footer-bottom {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 15px 3%;
+  }
+  
+  .footer-about, .footer-socials, .footer-contact {
+    padding: 0 10px;
+  }
+  
+  .footer-about h2 {
+    font-size: 1.2rem;
+  }
+  
+  .footer-socials h3, .footer-contact h3 {
+    font-size: 0.95rem;
+  }
+  
+  .footer-about p {
+    font-size: 0.85rem;
+  }
+  
+  .social-links {
+    gap: 10px;
+  }
+  
+  .social-links a {
+    font-size: 0.9rem;
+  }
+  
+  .social-icon {
+    font-size: 1.2rem;
+    margin-right: 6px;
+  }
+  
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer-container {
+    padding: 12px 2%;
+  }
+  
+  .footer-content {
+    gap: 15px;
+  }
+  
+  .footer-about h2 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-socials h3, .footer-contact h3 {
+    font-size: 0.9rem;
+  }
+  
+  .social-links a {
+    font-size: 0.85rem;
+  }
+  
+  .social-icon {
+    font-size: 1.1rem;
+    margin-right: 5px;
+  }
+}
