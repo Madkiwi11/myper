@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer.css";  // استيراد ملف CSS الخاص بـ footer
+import "./Footer.css";  // استيراد ملف CSS الخاص بـ footer
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";  // استيراد الأيقونات من react-icons
 
 const Footer = () => {
